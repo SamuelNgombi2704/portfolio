@@ -35,16 +35,16 @@ export const Contact = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Get In Touch
+            Let’s Work Together
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to collaborate? Let's discuss your next project and how AI can transform your digital presence.
+Whether you’re building a new product or refining an existing one, I’d love to hear from you. Reach out and let’s bring your ideas to life.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-8">Let's Connect</h3>
+            <h3 className="text-2xl font-bold text-white mb-8">Contact Details</h3>
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
@@ -93,7 +93,7 @@ export const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 transition-colors duration-200"
-                    placeholder="Your name"
+                    placeholder="John Doe"
                   />
                 </div>
                 <div>
@@ -108,7 +108,7 @@ export const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 transition-colors duration-200"
-                    placeholder="your@email.com"
+                    placeholder="you@example.com"
                   />
                 </div>
               </div>
@@ -125,7 +125,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 transition-colors duration-200"
-                  placeholder="Project discussion"
+                  placeholder="Let's talk about your next project"
                 />
               </div>
               
@@ -141,7 +141,7 @@ export const Contact = () => {
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 transition-colors duration-200 resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="Tell me a bit about your project, goals, or idea..."
                 />
               </div>
               
