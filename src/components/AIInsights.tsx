@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect, useState } from 'react';
-import { TrendingUp, Target, Users, Lightbulb } from 'lucide-react';
+import { TrendingUp, Target, Users, Lightbulb, Zap, Star } from 'lucide-react';
 
 export const AIInsights = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,42 +14,50 @@ export const AIInsights = () => {
 
   const insights = [
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: 'SEO Performance',
+      icon: <TrendingUp className="w-8 h-8 text-black" />,
+      title: 'SEO POWER',
       value: '94%',
-      description: 'Current optimization score',
-      trend: '+12% this month',
-      color: 'from-green-400 to-emerald-500',
+      description: 'OPTIMIZATION SCORE',
+      trend: '+12% THIS MONTH',
+      bgColor: 'bg-yellow-400',
+      borderColor: 'border-black',
+      textColor: 'text-black',
       counter: 'seo',
       target: 94,
     },
     {
-      icon: <Target className="w-8 h-8" />,
-      title: 'Conversion Rate',
+      icon: <Target className="w-8 h-8 text-black" />,
+      title: 'CONVERSION',
       value: '8.2%',
-      description: 'AI-optimized conversions',
-      trend: '+2.4% improvement',
-      color: 'from-blue-400 to-cyan-500',
+      description: 'AI-OPTIMIZED RATE',
+      trend: '+2.4% BOOST',
+      bgColor: 'bg-pink-500',
+      borderColor: 'border-white',
+      textColor: 'text-white',
       counter: 'conversion',
       target: 8.2,
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'User Engagement',
+      icon: <Users className="w-8 h-8 text-black" />,
+      title: 'ENGAGEMENT',
       value: '4.3m',
-      description: 'Average session duration',
-      trend: '+18% increase',
-      color: 'from-purple-400 to-pink-500',
+      description: 'SESSION DURATION',
+      trend: '+18% INCREASE',
+      bgColor: 'bg-cyan-400',
+      borderColor: 'border-black',
+      textColor: 'text-black',
       counter: 'engagement',
       target: 4.3,
     },
     {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: 'AI Suggestions',
+      icon: <Lightbulb className="w-8 h-8 text-black" />,
+      title: 'AI MAGIC',
       value: '23',
-      description: 'Active optimizations',
-      trend: 'Live monitoring',
-      color: 'from-yellow-400 to-orange-500',
+      description: 'ACTIVE OPTIMIZATIONS',
+      trend: 'LIVE MONITORING',
+      bgColor: 'bg-lime-400',
+      borderColor: 'border-black',
+      textColor: 'text-black',
       counter: 'suggestions',
       target: 23,
     },
@@ -60,7 +68,6 @@ export const AIInsights = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Animate counters
           insights.forEach((insight, index) => {
             setTimeout(() => {
               const duration = 2000;
@@ -94,85 +101,103 @@ export const AIInsights = () => {
   }, []);
 
   return (
-    <section id="ai-insights" className="py-20 px-6" ref={sectionRef}>
-      <div className="container mx-auto max-w-6xl">
-        <div className={`text-center mb-16 transition-all duration-1000 transform ${
+    <section id="ai-insights" className="py-24 px-6 relative" ref={sectionRef}>
+      {/* Brutalist background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-24 right-32 w-16 h-40 bg-yellow-400 rotate-12 opacity-50" />
+        <div className="absolute bottom-40 left-20 w-28 h-8 bg-pink-500 skew-x-12 opacity-60" />
+        <Zap className="absolute top-1/3 left-1/4 w-12 h-12 text-cyan-400 opacity-40 animate-bounce" />
+        <Star className="absolute bottom-1/4 right-1/4 w-10 h-10 text-lime-400 opacity-50 animate-spin" />
+      </div>
+
+      <div className="container mx-auto max-w-7xl relative z-10">
+        <div className={`text-center mb-20 transition-all duration-1000 transform ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            AI-Powered Insights
+          <h2 className="text-5xl md:text-7xl font-black mb-8 brutalist-text bg-gradient-to-r from-yellow-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent uppercase tracking-tighter">
+            AI INSIGHTS
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Real-time analytics and machine learning insights driving continuous optimization
+          <p className="text-xl md:text-2xl text-gray-200 font-bold max-w-4xl mx-auto">
+            <span className="text-yellow-400 font-black">REAL-TIME ANALYTICS</span> and machine learning insights 
+            driving <span className="text-pink-500 font-black">CONTINUOUS OPTIMIZATION</span>
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {insights.map((insight, index) => (
             <div 
               key={index} 
-              className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 group ${
+              className={`p-6 border-4 ${insight.borderColor} ${insight.bgColor} transition-all duration-500 transform hover:scale-105 hover:rotate-2 hover:-translate-y-4 group cursor-pointer ${
                 isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              style={{ 
+                transitionDelay: `${index * 100}ms`,
+                boxShadow: '8px 8px 0px rgba(0,0,0,0.8)',
+              }}
             >
-              <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${insight.color} flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300 transform-gpu`}>
+              <div className={`p-3 border-2 border-black ${insight.textColor === 'text-black' ? 'bg-white' : 'bg-black'} mb-4 group-hover:rotate-12 group-hover:animate-bounce transition-transform duration-300 inline-block`}>
                 {insight.icon}
               </div>
-              <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">
+              <h3 className={`text-2xl md:text-3xl font-black ${insight.textColor} mb-2 group-hover:animate-glitch uppercase tracking-wide`}>
                 {insight.counter === 'seo' ? `${Math.round(counters.seo)}%` :
                  insight.counter === 'conversion' ? `${counters.conversion.toFixed(1)}%` :
                  insight.counter === 'engagement' ? `${counters.engagement.toFixed(1)}m` :
                  Math.round(counters.suggestions)}
               </h3>
-              <p className="text-gray-300 mb-2 group-hover:text-gray-200 transition-colors duration-300">
+              <p className={`${insight.textColor} font-black text-sm mb-2 uppercase tracking-wide`}>
                 {insight.description}
               </p>
-              <p className="text-sm text-green-400 font-semibold group-hover:text-green-300 transition-colors duration-300">
+              <p className={`${insight.textColor} text-xs font-bold uppercase tracking-wider opacity-80`}>
                 {insight.trend}
               </p>
             </div>
           ))}
         </div>
 
-        <div className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:scale-[1.02] ${
+        <div className={`p-8 border-4 border-white bg-black transition-all duration-500 transform hover:scale-[1.02] hover:rotate-1 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-        }`} style={{ transitionDelay: '600ms' }}>
-          <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-            <Lightbulb className="w-6 h-6 mr-3 text-yellow-400 animate-pulse" />
-            Latest AI Recommendations
+        }`} 
+        style={{ 
+          transitionDelay: '600ms',
+          boxShadow: '12px 12px 0px rgba(255,255,255,0.3)',
+        }}>
+          <h3 className="text-3xl font-black text-white mb-8 flex items-center uppercase tracking-wide">
+            <div className="p-2 bg-yellow-400 border-2 border-white mr-4 animate-pulse">
+              <Lightbulb className="w-6 h-6 text-black" />
+            </div>
+            LATEST AI RECOMMENDATIONS
           </h3>
-          <div className="space-y-4">
+          <div className="space-y-6">
             {[
               {
-                color: 'bg-green-400',
-                title: 'Optimize meta descriptions for better click-through rates',
-                description: 'Potential 15% improvement in organic traffic'
+                color: 'bg-yellow-400',
+                title: 'OPTIMIZE META DESCRIPTIONS FOR BETTER CTR',
+                description: 'POTENTIAL 15% IMPROVEMENT IN ORGANIC TRAFFIC'
               },
               {
-                color: 'bg-blue-400',
-                title: 'Implement lazy loading for images below the fold',
-                description: 'Expected 0.8s reduction in page load time'
+                color: 'bg-cyan-400',
+                title: 'IMPLEMENT LAZY LOADING FOR IMAGES',
+                description: 'EXPECTED 0.8S REDUCTION IN PAGE LOAD TIME'
               },
               {
-                color: 'bg-purple-400',
-                title: 'Add structured data markup for better search visibility',
-                description: 'Improve rich snippet appearance in search results'
+                color: 'bg-pink-500',
+                title: 'ADD STRUCTURED DATA MARKUP',
+                description: 'IMPROVE RICH SNIPPET APPEARANCE IN SEARCH'
               }
             ].map((rec, index) => (
               <div 
                 key={index}
-                className={`flex items-start space-x-4 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-[1.02] ${
+                className={`flex items-start space-x-6 p-4 border-2 border-white hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-[1.02] hover:rotate-1 group ${
                   isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
                 }`}
                 style={{ transitionDelay: `${800 + index * 200}ms` }}
               >
-                <div className={`w-2 h-2 ${rec.color} rounded-full mt-2 flex-shrink-0 animate-pulse`}></div>
+                <div className={`w-4 h-4 ${rec.color} border-2 border-white mt-1 flex-shrink-0 animate-pulse group-hover:rotate-45 transition-transform duration-300`}></div>
                 <div>
-                  <p className="text-white font-medium hover:text-purple-300 transition-colors duration-300">
+                  <p className="text-white font-black text-lg uppercase tracking-wide group-hover:text-black transition-colors duration-300">
                     {rec.title}
                   </p>
-                  <p className="text-gray-400 text-sm hover:text-gray-300 transition-colors duration-300">
+                  <p className="text-gray-300 font-bold text-sm uppercase tracking-wide group-hover:text-gray-700 transition-colors duration-300">
                     {rec.description}
                   </p>
                 </div>
