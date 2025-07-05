@@ -99,7 +99,7 @@ export const Skills = () => {
         <div className={`text-center mb-20 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-8 brutalist-text bg-gradient-to-r from-yellow-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent uppercase tracking-tighter">
-            COMPETENCES
+            COMPÉTENCES
           </h2>
 
 

@@ -30,7 +30,7 @@ export const AIInsights = () => {
       textColor: 'text-black',
     },
     {
-      icon: <div className="w-8 h-8 overflow-hidden rounded-full"><img src="/2.png" alt="Users Icon" className="w-full h-full scale-x-[1.25] translate-x-[-0.25rem] object-cover" /></div>,
+      icon: <img src="/public/CFAO.png" alt="Lightbulb Icon" className="w-8 h-8 scale-x-100" />,
       title: 'Stage - ANALYSTE PROGRAMMEUR | DEVELOPPEUR PROJETS',
       company: 'CFAO MOBILITY',
       duration: 'Mars 2024 – Octobre 2024',
@@ -60,15 +60,7 @@ export const AIInsights = () => {
       textColor: 'text-white',
     },
     {
-      icon: (
-        <div className="w-8 h-8 overflow-hidden rounded-full">
-          <img
-            src="/1.png"
-            alt="Users Icon"
-            className="w-full h-full scale-x-[1.25] -translate-x-1 object-cover"
-          />
-        </div>
-      ),
+      icon: <img src="/public/Fichier 1.png" alt="Lightbulb Icon" className="w-8 h-8" />,
       title: 'Stage - Développeur full-stack | AI LEAD',
       company: 'UBIPHARM',
       duration: 'Mars 2023 – Juillet 2023',
@@ -96,7 +88,7 @@ export const AIInsights = () => {
     },
 
     {
-      icon: <img src="/public/lightbulb.png" alt="Lightbulb Icon" className="w-8 h-8" />,
+      icon: <img src="/public/Logo@2x.png" alt="Lightbulb Icon" className="w-8 h-8" />,
       title: 'Freelance - UI/UX DESIGNER',
       company: 'Beelieve',
       duration: '2021 – 2022',
@@ -151,7 +143,7 @@ export const AIInsights = () => {
         <div className={`text-center mb-20 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
           <h2 className="text-3xl sm:text-4xl md:text-7xl font-black mb-6 sm:mb-8 brutalist-text bg-gradient-to-r from-yellow-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent uppercase tracking-tighter">
-            PROFESSIONAL EXPERIENCES
+            EXPÉRIENCES PROFESSIONNELLES
           </h2>
 
           <p className="text-xl md:text-2xl text-gray-200 font-bold max-w-4xl mx-auto">
@@ -207,19 +199,21 @@ export const AIInsights = () => {
         </div>
 
 
-        <div className={`p-8 border-4 border-white bg-black transition-all duration-500 transform hover:scale-[1.02] hover:rotate-1 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-          }`}
+        <div
+          className={`p-6 sm:p-8 border-4 border-white bg-black transition-all duration-500 transform hover:scale-[1.02] hover:rotate-1 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+            }`}
           style={{
             transitionDelay: '600ms',
             boxShadow: '12px 12px 0px rgba(255,255,255,0.3)',
-          }}>
-          <h3 className="text-3xl font-black text-white mb-8 flex items-center uppercase tracking-wide">
-            <div className="p-2 bg-yellow-400 border-2 border-white mr-4 animate-pulse">
-              <Lightbulb className="w-6 h-6 text-black" />
+          }}
+        >
+          <h3 className="text-2xl sm:text-3xl font-black text-white mb-6 sm:mb-8 flex items-center uppercase tracking-wide">
+            <div className="p-2 bg-yellow-400 border-2 border-white mr-3 sm:mr-4 animate-pulse">
+              <Lightbulb className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
             </div>
             KEY PROJECT HIGHLIGHTS
           </h3>
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {[
               {
                 color: 'bg-yellow-400',
@@ -239,16 +233,18 @@ export const AIInsights = () => {
             ].map((proj, index) => (
               <div
                 key={index}
-                className={`flex items-start space-x-6 p-4 border-2 border-white hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-[1.02] hover:rotate-1 group ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
+                className={`flex items-start space-x-4 sm:space-x-6 p-3 sm:p-4 border-2 border-white hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-[1.02] hover:rotate-1 group ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
                   }`}
                 style={{ transitionDelay: `${800 + index * 200}ms` }}
               >
-                <div className={`w-4 h-4 ${proj.color} border-2 border-white mt-1 flex-shrink-0 animate-pulse group-hover:rotate-45 transition-transform duration-300`} />
+                <div
+                  className={`w-4 h-4 ${proj.color} border-2 border-white mt-1 flex-shrink-0 animate-pulse group-hover:rotate-45 transition-transform duration-300`}
+                />
                 <div>
-                  <p className="text-white font-black text-lg uppercase tracking-wide group-hover:text-black transition-colors duration-300">
+                  <p className="text-white font-black text-base sm:text-lg uppercase tracking-wide group-hover:text-black transition-colors duration-300">
                     {proj.title}
                   </p>
-                  <p className="text-gray-300 font-bold text-sm uppercase tracking-wide group-hover:text-gray-700 transition-colors duration-300">
+                  <p className="text-gray-300 font-bold text-xs sm:text-sm uppercase tracking-wide group-hover:text-gray-700 transition-colors duration-300">
                     {proj.description}
                   </p>
                 </div>
