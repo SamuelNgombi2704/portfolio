@@ -33,7 +33,7 @@ export const Skills = () => {
         { name: 'PostgreSQL', level: 75 },
         { name: 'Express.js', level: 85 },           // Popular Node.js framework
         { name: 'REST APIs', level: 90 },            // Important backend skill
-        { name: 'GraphQL', level: 70 },              // API querying language
+        { name: 'PHP', level: 70 },              // API querying language
       ],
       icon: <Database className="w-8 h-8 text-black" />,
       bgColor: 'bg-pink-500',
@@ -98,9 +98,11 @@ export const Skills = () => {
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className={`text-center mb-20 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
-          <h2 className="text-5xl md:text-7xl font-black mb-8 brutalist-text bg-gradient-to-r from-yellow-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent uppercase tracking-tighter">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-8 brutalist-text bg-gradient-to-r from-yellow-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent uppercase tracking-tighter">
             COMPETENCES
           </h2>
+
+
           <p className="text-xl md:text-2xl text-gray-200 font-bold max-w-4xl mx-auto">
             Mon ensemble de technologies <span className="text-yellow-400 font-black">POLYVALENTES</span> utilisées pour créer des applications web {''}
             <span className="text-pink-500 font-black">INTELLIGENTES</span>.

@@ -18,7 +18,7 @@ export const Header = () => {
     { name: 'Qui suis-je ?', href: '#about' },
     { name: 'Compétences', href: '#skills' },
     { name: 'Projets', href: '#projects' },
-    { name: 'Etudes IA', href: '#ai-insights' },
+    { name: 'Expérience', href: '#ai-insights' },
     { name: 'Contact', href: '#contact' },
   ];
 
