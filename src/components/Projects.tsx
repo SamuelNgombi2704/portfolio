@@ -25,9 +25,9 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: 'AI-POWERED E-COMMERCE',
-      description: 'Full-stack e-commerce solution with ML-driven product recommendations and dynamic pricing optimization that ACTUALLY WORKS.',
-      technologies: ['TypeScript', 'React', 'Python', 'TensorFlow', 'PostgreSQL'],
+      title: 'AI-POWERED ASSISTANT',
+      description: 'Full-stack assistant ChatBot with ML-driven product recommendations and dynamic pricing optimization that ACTUALLY WORKS.',
+      technologies: ['.NET', 'React', 'Python', 'TensorFlow', 'PostgreSQL'],
       features: ['Real-time analytics', 'AI recommendations', 'Auto-scaling'],
       icon: <Brain className="w-8 h-8 text-black" />,
       github: 'https://github.com',
@@ -37,7 +37,7 @@ export const Projects = () => {
       textColor: 'text-black',
     },
     {
-      title: 'SMART SEO OPTIMIZER',
+      title: ' CHURN CLIENT SAAS APP',
       description: 'Custom ML model that analyzes website content and automatically generates SEO improvements that BOOST your rankings.',
       technologies: ['Python', 'FastAPI', 'React', 'OpenAI API', 'MongoDB'],
       features: ['Auto SEO generation', 'Content analysis', 'Performance tracking'],
@@ -72,29 +72,28 @@ export const Projects = () => {
       </div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className={`text-center mb-20 transition-all duration-1000 transform ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-        }`}>
+        <div className={`text-center mb-20 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}>
           <h2 className="text-5xl md:text-7xl font-black mb-8 brutalist-text bg-gradient-to-r from-yellow-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent uppercase tracking-tighter">
-            PROJECTS
+            PROJETS
           </h2>
           <p className="text-xl md:text-2xl text-gray-200 font-bold max-w-4xl mx-auto">
-            <span className="text-yellow-400 font-black">INNOVATIVE SOLUTIONS</span> that blend traditional development 
-            with <span className="text-pink-500 font-black">AI INTELLIGENCE</span>
+            <span className="text-yellow-400 font-black">SOLUTIONS INNOVANTES</span> qui allient le développement traditionnel
+            à <span className="text-pink-500 font-black">L’INTELLIGENCE ARTIFICIELLE</span>
           </p>
+
         </div>
 
         <div className="space-y-16">
           {projects.map((project, index) => (
-            <div 
-              key={index} 
-              className={`transition-all duration-1000 transform ${
-                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-              }`}
+            <div
+              key={index}
+              className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                }`}
               style={{ transitionDelay: `${index * 300}ms` }}
             >
               <div className={`p-10 border-4 ${project.borderColor} ${project.bgColor} transition-all duration-500 transform hover:scale-[1.02] hover:rotate-1 hover:-translate-y-4 group cursor-pointer`}
-                style={{ 
+                style={{
                   boxShadow: '16px 16px 0px rgba(0,0,0,0.8)',
                 }}
               >
@@ -108,11 +107,11 @@ export const Projects = () => {
                     </h3>
                   </div>
                 </div>
-                
+
                 <p className={`${project.textColor} text-lg md:text-xl font-bold mb-8 leading-relaxed`}>
                   {project.description}
                 </p>
-                
+
                 <div className="mb-8">
                   <h4 className={`${project.textColor} font-black text-xl mb-4 uppercase tracking-wide`}>
                     KEY FEATURES:
@@ -127,28 +126,26 @@ export const Projects = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="flex flex-wrap gap-3 mb-8">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className={`px-4 py-2 border-2 border-black font-black text-sm uppercase tracking-wide hover:rotate-2 hover:scale-105 transition-all duration-300 transform-gpu ${
-                        project.textColor === 'text-black' ? 'bg-black text-white' : 'bg-white text-black'
-                      }`}
+                      className={`px-4 py-2 border-2 border-black font-black text-sm uppercase tracking-wide hover:rotate-2 hover:scale-105 transition-all duration-300 transform-gpu ${project.textColor === 'text-black' ? 'bg-black text-white' : 'bg-white text-black'
+                        }`}
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex space-x-6">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center px-6 py-3 border-4 border-black font-black text-lg uppercase tracking-wide transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:rotate-2 transform-gpu ${
-                      project.textColor === 'text-black' ? 'bg-black text-white hover:bg-white hover:text-black' : 'bg-white text-black hover:bg-black hover:text-white'
-                    }`}
+                    className={`flex items-center px-6 py-3 border-4 border-black font-black text-lg uppercase tracking-wide transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:rotate-2 transform-gpu ${project.textColor === 'text-black' ? 'bg-black text-white hover:bg-white hover:text-black' : 'bg-white text-black hover:bg-black hover:text-white'
+                      }`}
                     style={{ boxShadow: '6px 6px 0px rgba(0,0,0,0.8)' }}
                   >
                     <Github className="w-5 h-5 mr-3" />

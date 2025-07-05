@@ -1,10 +1,10 @@
 
 import React, { useRef, useEffect, useState } from 'react';
-import { Code, Database, Brain, Zap } from 'lucide-react';
+import { Code, Database, Brain, Zap, FerrisWheel } from 'lucide-react';
 
 export const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [animatedSkills, setAnimatedSkills] = useState<{[key: string]: number}>({});
+  const [animatedSkills, setAnimatedSkills] = useState<{ [key: string]: number }>({});
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const skillCategories = [
@@ -15,6 +15,9 @@ export const Skills = () => {
         { name: 'React', level: 90 },
         { name: 'Next.js', level: 85 },
         { name: 'Tailwind CSS', level: 90 },
+        { name: 'JavaScript', level: 90 },           // Core web language
+        { name: 'HTML5', level: 95 },
+        { name: 'CSS3', level: 90 },
       ],
       icon: <Code className="w-8 h-8 text-black" />,
       bgColor: 'bg-yellow-400',
@@ -24,10 +27,13 @@ export const Skills = () => {
     {
       title: 'BACKEND',
       skills: [
-        { name: 'Python', level: 90 },
+        { name: 'Python (Django)', level: 90 },
         { name: 'Node.js', level: 85 },
         { name: 'FastAPI', level: 80 },
         { name: 'PostgreSQL', level: 75 },
+        { name: 'Express.js', level: 85 },           // Popular Node.js framework
+        { name: 'REST APIs', level: 90 },            // Important backend skill
+        { name: 'GraphQL', level: 70 },              // API querying language
       ],
       icon: <Database className="w-8 h-8 text-black" />,
       bgColor: 'bg-pink-500',
@@ -41,13 +47,17 @@ export const Skills = () => {
         { name: 'PyTorch', level: 75 },
         { name: 'Scikit-learn', level: 85 },
         { name: 'OpenAI API', level: 90 },
+        { name: 'Hugging Face Transformers', level: 80 }, // For NLP models
+        { name: 'NLP', level: 85 },                         // Natural Language Processing
+        { name: 'SEO Optimization', level: 75 },           // AI-driven SEO work
       ],
       icon: <Brain className="w-8 h-8 text-black" />,
       bgColor: 'bg-cyan-400',
       borderColor: 'border-black',
       textColor: 'text-black',
-    },
+    }
   ];
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -86,26 +96,25 @@ export const Skills = () => {
       </div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className={`text-center mb-20 transition-all duration-1000 transform ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-        }`}>
+        <div className={`text-center mb-20 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}>
           <h2 className="text-5xl md:text-7xl font-black mb-8 brutalist-text bg-gradient-to-r from-yellow-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent uppercase tracking-tighter">
-            SKILLS
+            COMPETENCES
           </h2>
           <p className="text-xl md:text-2xl text-gray-200 font-bold max-w-4xl mx-auto">
-            A <span className="text-yellow-400 font-black">POWERFUL ARSENAL</span> of technologies for building 
-            <span className="text-pink-500 font-black"> INTELLIGENT</span> applications
+            Mon ensemble de technologies <span className="text-yellow-400 font-black">POLYVALENTES</span> utilisées pour créer des applications web {''}
+            <span className="text-pink-500 font-black">INTELLIGENTES</span>.
           </p>
+
         </div>
 
         <div className="grid md:grid-cols-3 gap-10">
           {skillCategories.map((category, categoryIndex) => (
-            <div 
-              key={categoryIndex} 
-              className={`p-8 border-4 ${category.borderColor} ${category.bgColor} transition-all duration-500 transform hover:scale-105 hover:rotate-2 hover:-translate-y-4 group cursor-pointer ${
-                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-              }`}
-              style={{ 
+            <div
+              key={categoryIndex}
+              className={`p-8 border-4 ${category.borderColor} ${category.bgColor} transition-all duration-500 transform hover:scale-105 hover:rotate-2 hover:-translate-y-4 group cursor-pointer ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                }`}
+              style={{
                 transitionDelay: `${categoryIndex * 200}ms`,
                 boxShadow: '12px 12px 0px rgba(0,0,0,0.8)',
               }}
@@ -120,7 +129,7 @@ export const Skills = () => {
                 {category.skills.map((skill, skillIndex) => {
                   const skillKey = `${categoryIndex}-${skillIndex}`;
                   const animatedLevel = animatedSkills[skillKey] || 0;
-                  
+
                   return (
                     <div key={skillIndex} className="group/skill">
                       <div className="flex justify-between mb-2">

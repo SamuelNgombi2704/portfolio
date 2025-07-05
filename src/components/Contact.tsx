@@ -34,17 +34,19 @@ export const Contact = () => {
     <section id="contact" className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Let’s Work Together
+          <h2 className="text-5xl md:text-7xl font-black mb-8 brutalist-text bg-gradient-to-r from-yellow-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent uppercase tracking-tighter">
+            TRAVAILLONS ENSEMBLE
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-Whether you’re building a new product or refining an existing one, I’d love to hear from you. Reach out and let’s bring your ideas to life.
+
+          <p className="text-xl md:text-2xl text-gray-200 font-bold max-w-4xl mx-auto">
+            Que vous construisiez un <span className="text-yellow-400 font-black">NOUVEAU PRODUIT</span> ou que vous amélioriez un
+            <span className="text-pink-500 font-black"> PRODUIT EXISTANT</span>, je serais ravi d’échanger avec vous. Contactez-moi et donnons vie à vos idées.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-8">Contact Details</h3>
+            <h3 className="text-2xl font-bold text-white mb-8">Coordonnées</h3>
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
@@ -52,38 +54,38 @@ Whether you’re building a new product or refining an existing one, I’d love 
                 </div>
                 <div>
                   <p className="text-white font-semibold">Email</p>
-                  <p className="text-gray-300">samuelngombi.work.com</p>
+                  <p className="text-gray-300">samuelngombi.work@gmail.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold">Phone</p>
+                  <p className="text-white font-semibold">Téléphone</p>
                   <p className="text-gray-300">+33 758113166</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold">Location</p>
+                  <p className="text-white font-semibold">Localisation</p>
                   <p className="text-gray-300">Paris, France</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+          <div className="bg-yellow-400 text-black p-8 border-4 border-black">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Name
+                  <label htmlFor="name" className="block text-sm font-bold uppercase mb-2">
+                    Nom
                   </label>
                   <input
                     type="text"
@@ -92,12 +94,12 @@ Whether you’re building a new product or refining an existing one, I’d love 
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 transition-colors duration-200"
+                    className="w-full px-4 py-3 bg-yellow-100 border-2 font-black mb-8  border-black text-black font-mono placeholder-black"
                     placeholder="John Doe"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-bold uppercase mb-2">
                     Email
                   </label>
                   <input
@@ -107,15 +109,15 @@ Whether you’re building a new product or refining an existing one, I’d love 
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 transition-colors duration-200"
-                    placeholder="you@example.com"
+                    className="w-full px-4 py-3 bg-yellow-100 border-2 font-black mb-8  border-black text-black font-mono placeholder-black"
+                    placeholder="vous@example.com"
                   />
                 </div>
               </div>
-              
+
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                  Subject
+                <label htmlFor="subject" className="block text-sm font-bold uppercase mb-2">
+                  Sujet
                 </label>
                 <input
                   type="text"
@@ -124,13 +126,13 @@ Whether you’re building a new product or refining an existing one, I’d love 
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 transition-colors duration-200"
-                  placeholder="Let's talk about your next project"
+                  className="w-full px-4 py-3 bg-yellow-100 border-2 font-black mb-8  border-black text-black font-mono placeholder-black"
+                  placeholder="Parlons de votre prochain projet"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-bold uppercase mb-2">
                   Message
                 </label>
                 <textarea
@@ -140,22 +142,22 @@ Whether you’re building a new product or refining an existing one, I’d love 
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 transition-colors duration-200 resize-none"
-                  placeholder="Tell me a bit about your project, goals, or idea..."
+                  className="w-full px-4 py-3 bg-yellow-100 border-2 font-black mb-8  border-black text-black font-mono placeholder-black resize-none"
+                  placeholder="Parlez-moi un peu de votre projet, vos objectifs ou votre idée..."
                 />
               </div>
-              
+
               <button
                 type="submit"
-                className="w-full px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
+                className="w-full px-8 py-3 bg-black text-yellow-300 border-2 border-black font-bold uppercase hover:bg-yellow-300 hover:text-black transition-none"
               >
-                <Send className="w-5 h-5" />
-                <span>Send Message</span>
+                Envoyer
               </button>
             </form>
           </div>
         </div>
       </div>
     </section>
+
   );
 };

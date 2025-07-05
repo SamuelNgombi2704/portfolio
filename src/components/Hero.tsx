@@ -21,7 +21,7 @@ export const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative px-6 overflow-hidden">
       {/* Brutalist animated background shapes */}
       <div className="absolute inset-0 overflow-hidden">
-        <div 
+        <div
           className="absolute w-96 h-96 bg-gradient-to-r from-yellow-400 to-pink-500 opacity-20 blur-2xl animate-brutalist-bounce"
           style={{
             transform: `translate(${mousePosition.x * 100}px, ${mousePosition.y * 50}px) rotate(45deg)`,
@@ -30,7 +30,7 @@ export const Hero = () => {
             left: '20%',
           }}
         />
-        <div 
+        <div
           className="absolute w-80 h-80 bg-gradient-to-r from-cyan-400 to-lime-400 opacity-15 blur-3xl animate-pulse"
           style={{
             transform: `translate(${mousePosition.x * -80}px, ${mousePosition.y * -60}px) rotate(-30deg)`,
@@ -45,7 +45,7 @@ export const Hero = () => {
         <div className="mb-12">
           {/* Brutalist glitch effect title */}
           <h1 className="text-6xl md:text-8xl font-black mb-8 animate-fade-in relative">
-            <span 
+            <span
               className="brutalist-text bg-gradient-to-r from-white via-yellow-300 to-cyan-300 bg-clip-text text-transparent hover:animate-glitch inline-block cursor-pointer"
               style={{
                 transform: `perspective(1000px) rotateX(${mousePosition.y * 10}deg) rotateY(${mousePosition.x * 10}deg)`,
@@ -53,10 +53,10 @@ export const Hero = () => {
                 transition: 'transform 0.3s ease-out',
               }}
             >
-              CREATIVE
+              SAMUEL
             </span>
             <br />
-            <span 
+            <span
               className="brutalist-text bg-gradient-to-r from-pink-400 via-purple-400 to-lime-400 bg-clip-text text-transparent hover:animate-glitch inline-block cursor-pointer"
               style={{
                 transform: `perspective(1000px) rotateX(${mousePosition.y * -8}deg) rotateY(${mousePosition.x * -8}deg)`,
@@ -64,23 +64,23 @@ export const Hero = () => {
                 transition: 'transform 0.3s ease-out',
               }}
             >
-              DEVELOPER
+              NGOMBI
             </span>
           </h1>
-          
+
           <div className="relative inline-block">
             <p className="text-xl md:text-3xl text-gray-200 mb-12 leading-relaxed animate-fade-in delay-200 font-bold tracking-wide">
-              Building <span className="text-yellow-400 font-black">BOLD</span> digital experiences with{' '}
-              <span className="text-cyan-400 font-black">AI-POWERED</span> optimization
+              Je suis :  <span className="text-yellow-400 font-black">DÉVELOPPEUR WEB FULL-STACK</span> ,{' '}
+              <span className="text-cyan-400 font-black">DATA ANALYST Junior</span> et{' '} <span className="text-pink-400 font-black"></span>futur <span className="text-pink-400 font-black">DATA ENGINEER</span>
             </p>
             <Zap className="absolute -right-8 -top-2 w-8 h-8 text-yellow-400 animate-bounce" />
           </div>
         </div>
-        
+
         {/* Brutalist social links */}
         <div className="flex justify-center space-x-8 mb-16 animate-fade-in delay-300">
           <a
-            href="https://github.com"
+            href="http://www.github.com/SamuelNgombi2704"
             target="_blank"
             rel="noopener noreferrer"
             className="p-4 bg-black border-4 border-white brutalist-shadow hover:bg-yellow-400 hover:text-black transition-all duration-300 hover:scale-110 hover:rotate-12 transform-gpu group"
@@ -88,7 +88,7 @@ export const Hero = () => {
             <Github className="w-8 h-8 group-hover:animate-glitch" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/samuel-ngombi"
             target="_blank"
             rel="noopener noreferrer"
             className="p-4 bg-black border-4 border-white brutalist-shadow hover:bg-cyan-400 hover:text-black transition-all duration-300 hover:scale-110 hover:rotate-12 transform-gpu group"
@@ -96,7 +96,7 @@ export const Hero = () => {
             <Linkedin className="w-8 h-8 group-hover:animate-glitch" />
           </a>
           <a
-            href="mailto:contact@example.com"
+            href="mailto:samuelngombi.work@gmail.com"
             className="p-4 bg-black border-4 border-white brutalist-shadow hover:bg-pink-400 hover:text-black transition-all duration-300 hover:scale-110 hover:rotate-12 transform-gpu group"
           >
             <Mail className="w-8 h-8 group-hover:animate-glitch" />
@@ -109,13 +109,13 @@ export const Hero = () => {
             href="#projects"
             className="px-10 py-4 bg-yellow-400 text-black font-black text-lg border-4 border-black brutalist-shadow hover:bg-pink-500 hover:text-white transition-all duration-300 hover:scale-105 hover:-translate-y-2 transform-gpu uppercase tracking-wider"
           >
-            VIEW MY WORK
+            VOIR MES PROJETS
           </a>
           <a
             href="#contact"
             className="px-10 py-4 bg-transparent border-4 border-cyan-400 text-cyan-400 font-black text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 hover:scale-105 hover:-translate-y-2 transform-gpu uppercase tracking-wider brutalist-shadow"
           >
-            GET IN TOUCH
+            CONTACTEZ-MOI
           </a>
         </div>
       </div>
