@@ -23,8 +23,8 @@ export const Header = () => {
   ];
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
-      }`}>
+    <header className={`fixed top-0 w-full z-[9999] transition-all duration-300 ${isScrolled ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
+
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2 text-sm font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-yellow-400">
