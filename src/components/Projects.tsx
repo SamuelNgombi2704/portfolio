@@ -158,6 +158,20 @@ export const Projects = () => {
             </div>
           ))}
         </div>
+
+        {/* BUTTON: PLUS DE PROJETS */}
+        <div className="mt-20 text-center">
+          <a
+            href="https://github.com/samuelngombi2704" // replace with your GitHub profile
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-8 py-4 bg-lime-400 border-4 border-black text-black font-black text-base sm:text-lg uppercase tracking-wide hover:bg-yellow-400 transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:rotate-2 transform-gpu"
+            style={{ boxShadow: '6px 6px 0px rgba(0,0,0,0.8)' }}
+          >
+            <Github className="w-5 h-5 mr-3" />
+            PLUS DE PROJETS
+          </a>
+        </div>
       </div>
     </section>
   );
